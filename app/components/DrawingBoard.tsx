@@ -22,7 +22,8 @@ export default function DrawingBoard() {
   const lastPos = useRef<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
-    const websocket = new WebSocket('ws://localhost:3000');
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:3001';
+    const websocket = new WebSocket(wsUrl);
 
     websocket.onopen = () => {
       console.log('Connected to WebSocket');
