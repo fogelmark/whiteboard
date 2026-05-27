@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install ws @types/ws)",
+      "Bash(npm install -D ts-node)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
